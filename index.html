@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link rel="stylesheet" href="./style.css" />
+
+		<title>Frontend Mentor | Tip calculator app</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<main class="bg-blue">
+			<h1 class="absolute-title uppercase">spli<br />tter</h1>
+
+			<section class="tip-calculator">
+				<article class="column one">
+					<div class="bill-amount flex pb-l">
+						<label for="billAmount" class="input-label ff-main"> Bill </label>
+						<div>
+							<input
+								type="number"
+								placeholder="TESTtest"
+								name="billAmount"
+								class="input-ctrl"
+							/>
+							<img src="./images/icon-dollar.svg" alt="" class="input-img" />
+						</div>
+					</div>
+
+					<div class="tip-amount flex pb-l">
+						<label for="tipAmount" class="input-label capitalize ff-main">
+							select tip
+						</label>
+
+						<div class="tip-buttons">
+							<button class="tip-btn ff-main">5%</button>
+							<button class="tip-btn ff-main">10%</button>
+							<button class="tip-btn ff-main">15%</button>
+							<button class="tip-btn ff-main">25%</button>
+							<button class="tip-btn ff-main">50%</button>
+							<div class="custom-btn-container">
+								<button class="tip-btn custom ff-main capitalize">
+									custom
+								</button>
+								<input type="number" class="custom-input hide" />
+							</div>
+						</div>
+					</div>
+
+					<div class="people-amount flex pb-l">
+						<label for="peopleAmount" class="input-label ff-main"
+							>Number of People</label
+						>
+						<div>
+							<input
+								type="number"
+								name="peopleAmount"
+								class="input-ctrl"
+								placeholder="TESTtest"
+							/>
+							<img src="./images/icon-person.svg" alt="" class="input-img" />
+						</div>
+					</div>
+				</article>
+
+				<article class="column two flex bg-drk-cyan">
+					<div class="column-two-center">
+						<div class="print-amount justify-content">
+							<span class="input-label amount-label ff-main flex">
+								<p class="first capitalize clr-white">tip amount</p>
+								<p class="second clr-accent">/ person</p>
+							</span>
+							<span class="printout clr-cyan ff-main" data-printAmount
+								>$22.45</span
+							>
+						</div>
+
+						<div class="print-total justify-content">
+							<span class="input-label total-label ff-main flex">
+								<p class="first capitalize clr-white">total</p>
+								<p class="second clr-accent">/ person</p>
+							</span>
+							<span class="printout clr-cyan ff-main" data-printTotal
+								>$145.19</span
+							>
+						</div>
+					</div>
+
+					<button class="reset-btn uppercase">reset</button>
+				</article>
+			</section>
+		</main>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+	</body>
+</html>

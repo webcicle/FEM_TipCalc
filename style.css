@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+	--font-main: 'Space Mono', monospace;
+
+	--fs: 1.2;
+
+	--fs-main: calc(var(--fs) * 1rem);
+	--font-small: calc(var(--fs) * .8rem)
+	--fw-reg: 400;
+	--fw-bold: 700;
+
+	--border-radius: 5px;
+
+	--clr-strong-cyan: hsl(172, 67%, 45%);
+	--clr-very-dark-cyan: hsl(183, 100%, 15%);
+	--dark-grayish-cyan: hsl(186, 14%, 43%);
+	--dark-grayish-cyan--lighter: hsl(184, 14%, 56%);
+	--light-grayish-cyan: hsl(185, 41%, 84%);
+	--light-grayish-cyan--lighter: hsl(189, 41%, 97%);
+	--white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p {
+	padding: 0;
+	margin: 0;
+}
+
+.clr-cyan {
+	color: var(--clr-strong-cyan);
+}
+
+.clr-drk-cyan {
+	color: var(--clr-very-dark-cyan);
+}
+
+.clr-white {
+	color: var(--white);
+}
+
+.clr-accent {
+	color: var(--dark-grayish-cyan);
+}
+
+.bg-drk-cyan {
+	background-color: var(--clr-very-dark-cyan);
+}
+
+.bg-blue {
+	background-color: var(--light-grayish-cyan);
+}
+
+.column {
+	width: 100%;
+	max-width: 85%;
+	margin-inline: auto;
+	padding-block: 1rem;
+}
+
+.pb-l {
+	padding-bottom: 2rem;
+}
+.pb-m {
+	padding-bottom: 1.5rem;
+}
+.pb-s {
+	padding-bottom: 1rem;
+}
+
+.bill-amount > div,
+.people-amount > div {
+	position: relative;
+}
+
+.input-img {
+	position: absolute;
+	top: 50%;
+	left: 1em;
+	transform: translateY(-50%);
+}
+
+.justify-content {
+	display: flex;
+	justify-content: space-between;
+ align-items: center;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid {
+	display: grid;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.ff-main {
+	font-family: var(--font-main);
+}
+
+.input-label {
+	font-size: var(--fs-main);
+	margin-bottom: 0.4em;
+ color: var(--dark-grayish-cyan--lighter);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input[type='number'] {
+	appearance: textfield;
+	background-color: var(--light-grayish-cyan--lighter);
+	border: 0;
+	border-radius: var(--border-radius);
+	display: block;
+	width: 100%;
+ text-align: right;
+	padding: 1.2em;
+	font-size: var(--font-main);
+	font-weight: var(--fw-bold);
+	color: var(--clr-very-dark-cyan);
+	font-family: var(--font-main);
+}
+
+input[type='number']::placeholder {
+	text-align: right;
+}
+
+.custom-input {
+ width: 100%;
+}
+
+.custom-input.hide {
+	display: none;
+}
+
+.absolute-title {
+	text-align: center;
+	color: var(--dark-grayish-cyan);
+	font-family: var(--font-main);
+	font-weight: var(--fw-bold);
+	line-height: 0.9;
+	padding-block: 2rem;
+}
+
+.tip-calculator {
+	background-color: var(--white);
+}
+
+.tip-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+ padding-block: .7em;
+}
+
+.tip-btn {
+	/* flex-grow: 1; */
+	width: calc(50% - 1em);
+	font-size: var(--fs-main);
+	font-weight: var(--fw-bold);
+	padding: 0.5em;
+	background-color: var(--clr-very-dark-cyan);
+	color: var(--white);
+}
+
+.tip-btn.custom {
+ background-color: var(--light-grayish-cyan);
+}
+
+.tip-btn.custom.hide {
+ display: none;
+}
+
+.tip-btn,
+.custom-btn-container {
+	flex-grow: 1;
+	width: calc(50% - 1em);
+	border: none;
+	border-radius: var(--border-radius);
+}
+
+.tip-btn.custom {
+	width: 100%;
+}
+
+.column.two {
+	padding: 1.5em 1em;
+	border-radius: var(--border-radius);
+ margin-bottom: 1.2em;
+} 
+
+.column-two-center {
+	padding-block: 1em;
+}
+
+.input-label .second {
+	font-size: var(--font-small);
+}
+
+.printout {
+ font-size: calc(var(--fs-main) * 1.6);
+}
+
+.reset-btn {
+	padding: 1em;
+ background-color: var(--clr-strong-cyan);
+ color: var(--clr-very-dark-cyan);
+ border-radius: var(--border-radius);
+ border: none;
+ font-size: var(--fs-main);
+ font-weight: var(--fw-bold);
+}
+
+@media (min-width: 375px) {
+}
+@media (min-width: 1440px) {
+ :root {
+  --fs-main: 2rem;
+ }
+ .column.two {
+   border-radius: 1em;
+   padding: 4em 3em;
+ }
+
+ .reset-btn {
+  margin-top: auto;
+  margin-bottom: ;
+ }
+
+ .absolute-title{
+  position: absolute;
+  top: 5%;
+  font-size: 4rem
+ }
+ .bg-blue {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+ }
+ .tip-calculator{
+  display: flex;
+  gap: 4em;
+  width: 100%;
+  max-width: 1440px;
+  padding: 4em
+ }
+
+ .tip-buttons {
+  gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ }
+
+ .tip-btn,
+.custom-btn-container {
+	width: 100%
+
+}
+}
