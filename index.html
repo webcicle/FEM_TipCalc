@@ -33,7 +33,7 @@
 			<h1 class="absolute-title uppercase">spli<br />tter</h1>
 
 			<section class="tip-calculator">
-				<article class="column one">
+				<div class="column one">
 					<div class="bill-amount flex pb-l">
 						<label for="billAmount" class="input-label ff-main"> Bill </label>
 						<div>
@@ -42,6 +42,7 @@
 								min="0"
 								placeholder="Bill Amount"
 								name="billAmount"
+								id="billAmount"
 								data-
 								class="input-ctrl"
 							/>
@@ -54,7 +55,7 @@
 							select tip
 						</label>
 
-						<div class="tip-buttons">
+						<div class="tip-buttons" id="tipAmounts">
 							<button
 								class="tip-btn ff-main"
 								data-selected="false"
@@ -117,6 +118,7 @@
 								type="number"
 								min="0"
 								name="peopleAmount"
+								id="peopleAmount"
 								data-
 								class="input-ctrl"
 								value="1"
@@ -125,33 +127,33 @@
 							<img src="./images/icon-person.svg" alt="" class="input-img" />
 						</div>
 					</div>
-				</article>
+				</div>
 
-				<article class="column two flex bg-drk-cyan">
+				<div class="column two flex bg-drk-cyan">
 					<div class="column-two-center">
 						<div class="print-amount justify-content">
-							<span class="input-label amount-label ff-main flex">
+							<div class="input-label amount-label ff-main flex">
 								<p class="first capitalize clr-white">tip amount</p>
 								<p class="second clr-accent">/ person</p>
-							</span>
-							<span class="printout clr-cyan ff-main" data-printAmount
-								>$22.45</span
-							>
+							</div>
+							<div class="printout clr-cyan ff-main" data-printAmount>
+								$22.45
+							</div>
 						</div>
 
 						<div class="print-total justify-content">
-							<span class="input-label total-label ff-main flex">
+							<div class="input-label total-label ff-main flex">
 								<p class="first capitalize clr-white">total</p>
 								<p class="second clr-accent">/ person</p>
-							</span>
-							<span class="printout clr-cyan ff-main" data-printTotal
-								>$145.19</span
-							>
+							</div>
+							<div class="printout clr-cyan ff-main" data-printTotal>
+								$145.19
+							</div>
 						</div>
 					</div>
 
 					<button class="reset-btn uppercase" data-resetBtn>reset</button>
-				</article>
+				</div>
 			</section>
 		</main>
 		<div class="attribution">
