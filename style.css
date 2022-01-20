@@ -270,8 +270,13 @@ box-shadow: 3px 3px 2px 1px hsla(0, 0%, 0%, 0.534);
 }
 @media (min-width: 1440px) {
  :root {
-  --fs-main: 2rem;
+  --fs-main: 1.5rem;
  }
+
+ .column.one {
+  height: max-content;
+ }
+
  .column.two {
    border-radius: 1em;
    padding: 4em 3em;
@@ -279,14 +284,24 @@ box-shadow: 3px 3px 2px 1px hsla(0, 0%, 0%, 0.534);
 
  .reset-btn {
   margin-top: auto;
-  margin-bottom: ;
+ }
+
+ 
+
+ h1 {
+  margin: 0;
+  padding-top: 0;
  }
 
  .absolute-title{
   position: absolute;
-  top: 5%;
-  font-size: 4rem
+  top: 10px;
+  font-size: 1rem;
+  margin-top: 0;
+  margin: 0;
+  padding-block: 0;
  }
+
  .bg-blue {
   display: grid;
   place-items: center;
@@ -297,8 +312,10 @@ box-shadow: 3px 3px 2px 1px hsla(0, 0%, 0%, 0.534);
   display: flex;
   gap: 4em;
   width: 100%;
-  max-width: 1440px;
-  padding: 4em
+  max-width: 1190px;
+  aspect-ratio: 2/1;
+  padding: 4em;
+  border-radius: var(--border-radius)
  }
 
  .tip-buttons {
