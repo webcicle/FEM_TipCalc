@@ -11,6 +11,7 @@
 	--fw-bold: 700;
 
 	--border-radius: 5px;
+ --transition: 400ms ease-in;
 
 	--clr-strong-cyan: hsl(172, 67%, 45%);
 	--clr-very-dark-cyan: hsl(183, 100%, 15%);
@@ -25,6 +26,10 @@
 *::after,
 *::before {
 	box-sizing: border-box;
+}
+
+button, a {
+ cursor: pointer;
 }
 
 body,
@@ -186,10 +191,19 @@ input[type='number']::placeholder {
 	padding: 0.5em;
 	background-color: var(--clr-very-dark-cyan);
 	color: var(--white);
+ cursor: pointer;
+ transition: color var(--transition) background-color var(--transition);
+
+}
+
+.tip-btn:hover {
+ background-color: var(--light-grayish-cyan);
+ color: var(--clr-very-dark-cyan);
 }
 
 .tip-btn.custom {
- background-color: var(--light-grayish-cyan);
+ background-color: var(--dark-grayish-cyan);
+ color: var(--white)
 }
 
 .tip-btn.custom.hide {
@@ -202,6 +216,12 @@ input[type='number']::placeholder {
 	width: calc(50% - 1em);
 	border: none;
 	border-radius: var(--border-radius);
+ transition: color var(--transition) background-color var(--transition);
+}
+
+[data-selected="true"] {
+ background-color: var(--light-grayish-cyan);
+ color: var(--clr-very-dark-cyan);
 }
 
 .tip-btn.custom {

@@ -13,6 +13,7 @@
 		/>
 
 		<link rel="stylesheet" href="./style.css" />
+		<script src="./script.js" type="module"></script>
 
 		<title>Frontend Mentor | Tip calculator app</title>
 
@@ -38,8 +39,10 @@
 						<div>
 							<input
 								type="number"
+								min="0"
 								placeholder="TESTtest"
 								name="billAmount"
+								data-
 								class="input-ctrl"
 							/>
 							<img src="./images/icon-dollar.svg" alt="" class="input-img" />
@@ -52,16 +55,50 @@
 						</label>
 
 						<div class="tip-buttons">
-							<button class="tip-btn ff-main">5%</button>
-							<button class="tip-btn ff-main">10%</button>
-							<button class="tip-btn ff-main">15%</button>
-							<button class="tip-btn ff-main">25%</button>
-							<button class="tip-btn ff-main">50%</button>
+							<button
+								class="tip-btn ff-main"
+								data-selected="false"
+								data-tipValue="5"
+							>
+								5%
+							</button>
+							<button
+								class="tip-btn ff-main"
+								data-selected="false"
+								data-tipValue="10"
+							>
+								10%
+							</button>
+							<button
+								class="tip-btn ff-main"
+								data-selected="false"
+								data-tipValue="15"
+							>
+								15%
+							</button>
+							<button
+								class="tip-btn ff-main"
+								data-selected="false"
+								data-tipValue="25"
+							>
+								25%
+							</button>
+							<button
+								class="tip-btn ff-main"
+								data-selected="false"
+								data-tipValue="50"
+							>
+								50%
+							</button>
 							<div class="custom-btn-container">
-								<button class="tip-btn custom ff-main capitalize">
+								<button
+									class="tip-btn custom ff-main capitalize"
+									data-customTipBtn
+									data-tipValue="custom"
+								>
 									custom
 								</button>
-								<input type="number" class="custom-input hide" />
+								<input type="number" min="0" class="custom-input hide" />
 							</div>
 						</div>
 					</div>
@@ -73,9 +110,12 @@
 						<div>
 							<input
 								type="number"
+								min="0"
 								name="peopleAmount"
+								data-
 								class="input-ctrl"
-								placeholder="TESTtest"
+								value="1"
+								placeholder="Amount of people splitting the bill"
 							/>
 							<img src="./images/icon-person.svg" alt="" class="input-img" />
 						</div>
@@ -105,7 +145,7 @@
 						</div>
 					</div>
 
-					<button class="reset-btn uppercase">reset</button>
+					<button class="reset-btn uppercase" data-resetBtn>reset</button>
 				</article>
 			</section>
 		</main>
