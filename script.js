@@ -53,9 +53,9 @@ let totalOut;
 const calculateTipAndTotal = () => {
 	const bill = parseInt(billAmount.value) || 0;
 	const people = parseInt(peopleAmount.value) || 1;
-	let tip = [];
+	let tip = inputs[1].value != '' ? inputs[1].value : [];
 	tipBtns.forEach((btn) => {
-		if (btn.dataset.selected == 'true') {
+		if (btn.dataset.selected == 'true' && !btn.classList.contains('custom')) {
 			tip.push(parseInt(btn.dataset.tipvalue));
 		} else {
 			return;
@@ -73,21 +73,35 @@ const prompt = () => {};
 
 const setupTipBtns = () => {
 	tipBtns.forEach((btn) => {
-		btn.addEventListener('click', () => {
-			if (btn.dataset.selected == 'false') {
+		btn.addEventListener('click', (e) => {
+			if (e.target.dataset.selected == 'false') {
 				resetTipBtns();
 				btn.setAttribute('data-selected', true);
 				calculateTipAndTotal();
 			}
+			if (e.target.dataset.customtipbtn === 'true') {
+				customTipSetup(e);
+				// calculateTipAndTotal(parseInt(inputs[1].value));
+			}
 		});
-		if (btn.dataset.customtipbtn) {
-			btn.classList.add('hide');
-			inputs[1].classList.remove('hide');
-		}
 	});
 };
 
+const customTipSetup = (e) => {
+	// console.log(inputs[1].value, inputs[1].value != '');
+	tipBtns.forEach((btn) => (btn.disabled = true));
+	tipBtns[5].classList.add('hide');
+	inputs[1].classList.remove('hide');
+};
+const customTipDismantle = (e) => {
+	// console.log(inputs[1].value, inputs[1].value != '');
+	tipBtns.forEach((btn) => (btn.disabled = false));
+	tipBtns[5].classList.remove('hide');
+	inputs[1].classList.add('hide');
+};
+
 const resetTipBtns = () => {
+	customTipDismantle();
 	tipBtns.forEach((btn) => {
 		btn.setAttribute('data-selected', false);
 	});

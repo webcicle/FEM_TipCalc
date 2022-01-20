@@ -40,7 +40,7 @@
 							<input
 								type="number"
 								min="0"
-								placeholder="TESTtest"
+								placeholder="Bill Amount"
 								name="billAmount"
 								data-
 								class="input-ctrl"
@@ -93,12 +93,17 @@
 							<div class="custom-btn-container">
 								<button
 									class="tip-btn custom ff-main capitalize"
-									data-customTipBtn
-									data-tipValue="custom"
+									data-customTipBtn="true"
+									data-tipValue="0"
 								>
 									custom
 								</button>
-								<input type="number" min="0" class="custom-input hide" />
+								<input
+									type="number"
+									min="0"
+									max="100"
+									class="custom-input hide"
+								/>
 							</div>
 						</div>
 					</div>
@@ -115,7 +120,7 @@
 								data-
 								class="input-ctrl"
 								value="1"
-								placeholder="Amount of people splitting the bill"
+								placeholder="Amount of people"
 							/>
 							<img src="./images/icon-person.svg" alt="" class="input-img" />
 						</div>
@@ -153,7 +158,7 @@
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
 				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
+			>. Coded by <a href="https://github.com/webcicle">webcicle</a>.
 		</div>
 	</body>
 </html>
