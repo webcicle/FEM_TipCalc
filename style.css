@@ -270,7 +270,7 @@ box-shadow: 3px 3px 2px 1px hsla(0, 0%, 0%, 0.534);
 }
 @media (min-width: 1440px) {
  :root {
-  --fs-main: 1.5rem;
+  --fs-main: 1.5rem; 
  }
 
  .column.one {
